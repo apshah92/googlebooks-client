@@ -1,0 +1,52 @@
+$navheight : 80px;
+$navwidth : 100%;
+$navfontsize : 2em;
+$firstElement-marginleft : 20px;
+
+
+.main-navbar {
+    width : $navwidth;
+    height: 70px;
+    .logo-div {
+        width : 20%;
+        height: 100%;
+        float : left;
+        //border : 1px solid green;
+        margin-left: 20px;
+        line-height: 1.5;
+        font-family : Helvetica ;
+
+        .brandLogo {
+            font-size : 1.8em;
+            padding-top: 0;
+        }
+        .subheader {
+            display: block;
+            font-size: 0.8em;
+        }
+   }
+    
+}
+
+form {      
+    border-bottom: 1px soild yellow;  
+    .input-field {
+        margin: 0;
+        padding: 0;
+    }
+    
+} 
+
+::-webkit-input-placeholder { /* Edge */
+    padding-left: 20px;
+  }
+  
+  :-ms-input-placeholder { /* Internet Explorer 10-11 */
+    padding-left: 20px;
+  }
+  
+  ::placeholder {
+    padding-left: 20px;
+  }
+
+
