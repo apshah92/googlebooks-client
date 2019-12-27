@@ -37,23 +37,27 @@ class Header extends Component {
                     <div className="nav-wrapper main-navbar  blue-grey darken-4">
                         <div className="logo-div">
                             <Link className="brandLogo" to={location => { this.props.clearSearch(); return {...location,pathname:"/"}}}>
-                                Bookstore-Redux
+                                GBooksLib-Redux
                             </Link>
                             <span className="subheader">A Client Interface for Google Books Api</span>
                         </div>
                         <ul id="nav-mobile" className="right hide-on-med-and-down">
                             <li><a href="#!"><i className="material-icons" onClick={this.toggleSearch}>search</i></a></li>
-                        </ul>                        
-                    </div>                                                       
+                        </ul>                                           
+                    </div>
+                    <div className="nav-wrapper">
+                        {this.state.isToggled && 
+                                <form onSubmit={this.triggerSearch} style={formStyle}>
+                                    <div className="input-field blue-grey darken-2" style={searchbarStyle}>
+                                        <input id="search" type="search" placeholder="Enter book title, author or publisher name" required />
+                                        <label class="label-icon" for="search"><i class="material-icons">search</i></label>
+                                        <i className="material-icons closeIcon" onClick={this.toggleSearch}>close</i>
+                                    </div>
+                                </form>
+                            }     
+                    </div>                                                      
                 </nav>
-                {this.state.isToggled && 
-                    <form onSubmit={this.triggerSearch} style={formStyle}>
-                        <div className="input-field blue-grey darken-2" style={searchbarStyle}>
-                            <input id="search" type="search" placeholder="Enter Book Tilte, Author or Keywords to search" required />
-                            <i className="material-icons closeIcon" onClick={this.toggleSearch}>close</i>
-                        </div>
-                    </form>
-                }
+                
                           
             </>
         );
