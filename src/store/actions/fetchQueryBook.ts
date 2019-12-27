@@ -3,7 +3,7 @@ import { FETCH_QUERY_BOOK } from '../actionTypes';
 
 function fetchQueryBook(query:string) {
     return async (dispatch:any) => {
-        var res = await fetch('https://www.googleapis.com/books/v1/volumes?q='+query);
+        var res = await fetch('https://www.googleapis.com/books/v1/volumes?q='+query+'&maxResults=40');
         var json = await res.json();
         var data = json.items.map( (item:any) => ( item.volumeInfo && {
             title : item.volumeInfo.title || "", 
