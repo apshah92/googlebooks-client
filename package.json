@@ -1,5 +1,12 @@
 {
-    "scripts": {        
-        "heroku-postbuild": "node index.js"
-      }
+  "name": "bookstore",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "heroku-postbuild": "node index.js"
+  },
+  "dependencies": {
+    "express": "^4.17.1",
+    "path": "^0.12.7"
+  }
 }
